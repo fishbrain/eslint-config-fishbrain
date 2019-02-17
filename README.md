@@ -47,3 +47,19 @@ Add this to `package.json` to get correct config for [prettier](https://prettier
     "trailingComma": "all"
   }
 ```
+
+### Editor settings
+
+To enable ESLint in VS Code add the following to your `settings.json`:
+
+```json
+{
+  "tslint.enable": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
+}
+```
