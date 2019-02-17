@@ -1,11 +1,10 @@
 {
   "name": "eslint-config-fishbrain",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "ESLint config for Fishbrain TypeScript projects",
   "main": "eslint.json",
   "scripts": {
-    "lint": "eslint . --config=eslintrc.json",
-    "test": "tslint --test ."
+    "lint": "eslint . --config=eslintrc.json"
   },
   "repository": {
     "type": "git",
