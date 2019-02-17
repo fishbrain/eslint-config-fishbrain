@@ -17,15 +17,22 @@ module.exports = {
     "react/prop-types": 0, // No need for prop types with Typescript
   },
   "parserOptions": {
-      "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "extraFileExtensions": [".ts", ".tsx"]
   },
   "env": {
-      "browser": true,
-      "jest": true
+    "browser": true,
+    "jest": true
   },
   "settings": {
-      "react": {
-        "version": "detect"
-      }
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
     }
+  }
 };
