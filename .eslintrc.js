@@ -9,10 +9,12 @@ module.exports = {
   "plugins": ["@typescript-eslint", "jest"],
   "rules": {
     "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/interface-name-prefix": [2, "always"],
     "@typescript-eslint/no-for-in-array": "error",
     "class-methods-use-this": ["error", { "exceptMethods": ["render"] }],
     "consistent-return": 0,
     "implicit-arrow-linebreak": 0,
+    "import/prefer-default-export": 0,
     "operator-linebreak": ["error", "after"],
     "react/prop-types": 0, // No need for prop types with Typescript
   },
@@ -32,7 +34,14 @@ module.exports = {
       "version": "detect"
     },
     "import/resolver": {
-      "typescript": {}
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
     }
   }
 };
