@@ -7,12 +7,12 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:jest/recommended",
+    "plugin:jsx-a11y/recommended",
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "jest"],
+  "plugins": ["@typescript-eslint", "jest", "jsx-a11y"],
   "rules": {
     "class-methods-use-this": 0,
-
     "@typescript-eslint/camelcase": ['error', { properties: 'never' }],
     "@typescript-eslint/explicit-function-return-type": ["error", { allowExpressions: true }],
     "@typescript-eslint/explicit-member-accessibility": 0,
@@ -25,12 +25,15 @@ module.exports = {
     "class-methods-use-this": 0,
     "consistent-return": 0,
     "implicit-arrow-linebreak": 0,
+    "import/order": ["error", {
+      "newlines-between": "always-and-inside-groups",
+      "groups": [["builtin", "external"], ["internal", "sibling", "parent", "index"]]
+    }],
     "import/prefer-default-export": 0,
     "no-magic-numbers": [2, { "ignoreArrayIndexes": true, "ignore": ALLOWED_NUMBERS }],
     "no-use-before-define": 0,
     "react/no-render-return-value": 0,
     "react/prop-types": 0, // No need for prop types with Typescript
-    
   },
   "parserOptions": {
     "project": "./tsconfig.json",
