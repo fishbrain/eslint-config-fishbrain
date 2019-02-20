@@ -30,6 +30,8 @@ module.exports = {
       "groups": [["builtin", "external"], ["internal", "sibling", "parent", "index"]]
     }],
     "import/prefer-default-export": 0,
+    "jsx-a11y/label-has-for": 0, // This is deprecated but in the recommended extension for some reason
+    "jsx-a11y/media-has-caption": 0,
     "no-magic-numbers": [2, { "ignoreArrayIndexes": true, "ignore": ALLOWED_NUMBERS }],
     "no-use-before-define": 0,
     "react/no-render-return-value": 0,
