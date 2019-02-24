@@ -10,7 +10,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "jest", "jsx-a11y"],
+  "plugins": ["@typescript-eslint", "jest", "jsx-a11y", "fp", "react-hooks"],
   "rules": {
     "class-methods-use-this": 0,
     "@typescript-eslint/camelcase": ['error', { properties: 'never' }],
@@ -24,6 +24,12 @@ module.exports = {
     "@typescript-eslint/no-use-before-define": 0,
     "class-methods-use-this": 0,
     "consistent-return": 0,
+    "fp/no-delete": "error",
+    "fp/no-let": "error",
+    "fp/no-loops": "error",
+    "fp/no-mutating-assign": "error",
+    "fp/no-mutating-methods": "error",
+    "fp/no-mutation": "error",
     "implicit-arrow-linebreak": 0,
     "import/order": ["error", {
       "newlines-between": "always-and-inside-groups",
@@ -36,6 +42,8 @@ module.exports = {
     "no-use-before-define": 0,
     "react/no-render-return-value": 0,
     "react/prop-types": 0, // No need for prop types with Typescript
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
   },
   "parserOptions": {
     "project": "./tsconfig.json",
