@@ -28,8 +28,9 @@ module.exports = {
     "fp/no-let": "error",
     "fp/no-loops": "error",
     "fp/no-mutating-assign": "error",
-    "fp/no-mutating-methods": "error",
-    "fp/no-mutation": "error",
+    "fp/no-mutation": ["error", {
+      "allowThis": true
+    }],
     "implicit-arrow-linebreak": 0,
     "import/order": ["error", {
       "newlines-between": "always-and-inside-groups",
@@ -38,6 +39,7 @@ module.exports = {
     "import/prefer-default-export": 0,
     "jsx-a11y/label-has-for": 0, // This is deprecated but in the recommended extension for some reason
     "jsx-a11y/media-has-caption": 0,
+    "jsx-a11y/no-onchange": 0,
     "no-magic-numbers": [2, { "ignoreArrayIndexes": true, "ignore": ALLOWED_NUMBERS }],
     "no-use-before-define": 0,
     "react/no-render-return-value": 0,
