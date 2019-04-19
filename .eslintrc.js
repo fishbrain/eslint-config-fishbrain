@@ -1,5 +1,7 @@
 const HTTP_CODES = [200, 201, 204, 400, 401, 404, 422, 500];
-const ALLOWED_NUMBERS = [-1, 0, 1].concat(HTTP_CODES);
+const HTML_HEADER_LEVELS = [1, 2, 3, 4, 5, 6];
+const COMMON_MATH_VALUES = [24, 60, 100];
+const ALLOWED_NUMBERS = [-1, 0, 1].concat(HTTP_CODES, HTML_HEADER_LEVELS, COMMON_MATH_VALUES);
 
 module.exports = {
   "extends": [
