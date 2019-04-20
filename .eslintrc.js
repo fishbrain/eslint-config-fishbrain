@@ -10,6 +10,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:jest/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:compat/recommended",
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "jest", "jsx-a11y", "fp", "react-hooks"],

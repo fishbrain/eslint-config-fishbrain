@@ -37,7 +37,7 @@ these strictness settings are recommended.
 }
 ```
 
-### Recommended package.json prettier settings
+### Recommended Prettier settings
 
 Add this to `package.json` to get correct config for [prettier](https://prettier.io/)
 
@@ -46,6 +46,34 @@ Add this to `package.json` to get correct config for [prettier](https://prettier
     "singleQuote": true,
     "trailingComma": "all"
   }
+```
+
+### Browser compatibility settings
+
+If you want to target certain browsers you can also set them in `package.json`.
+
+```json
+  "browserslist": ["chrome 70", "last 1 versions", "not ie <= 8"]
+```
+
+You can also add exceptions for polyfills in `.eslintrc`. See
+[eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat) for more info.
+
+```json
+{
+  "settings": {
+    "polyfills": [
+      // Example of marking entire API and all methods and properties as polyfilled
+      "Promise",
+      // Example of marking specific method of an API as polyfilled
+      "WebAssembly.compile",
+      // Example of API with no property (i.e. a function)
+      "fetch",
+      // Example of instance method, must add `.prototype.`
+      "Array.prototype.push"
+    ]
+  }
+}
 ```
 
 ### Editor settings
