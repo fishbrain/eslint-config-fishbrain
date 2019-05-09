@@ -1,7 +1,7 @@
 # ESLint config for Fishbrain TypeScript projects
 
 [![npm version](https://badge.fury.io/js/eslint-config-fishbrain.svg)](https://badge.fury.io/js/eslint-config-fishbrain)
-[![Build Status](https://travis-ci.com/fishbrain/tslint-config-fishbrain.svg?branch=master)](https://travis-ci.com/fishbrain/eslint-config-fishbrain)
+[![Build Status](https://codebuild.eu-west-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiMG95aWZRdmNjV1c1Z3M0YmdYcEd4dStTWGdDcWFtaFhCVVo0TVBjTFlTOEJTYWM0N09IS3JwazJWd3dhNlVidldYOTJpWll0b1ppS3RqNWR2RG1OWjFrPSIsIml2UGFyYW1ldGVyU3BlYyI6InhMN2haOHFCaWNCYlNVQjIiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://eu-west-1.console.aws.amazon.com/codesuite/codebuild/projects/eslint-config/history?region=eu-west-1)
 
 Rule set based on [Airbnb JavaScript style guide](https://github.com/airbnb/javascript)
 with some extra rules for Jest tests from [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest).
