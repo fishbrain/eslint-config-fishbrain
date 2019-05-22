@@ -1,7 +1,8 @@
-const HTTP_CODES = [200, 201, 204, 400, 401, 404, 422, 500];
+const HTTP_CODES = [200, 201, 204, 301, 302, 400, 401, 404, 422, 500];
 const HTML_HEADER_LEVELS = [1, 2, 3, 4, 5, 6];
 const COMMON_MATH_VALUES = [24, 60, 100];
-const ALLOWED_NUMBERS = Array.from(new Set([-1, 0, 1].concat(HTTP_CODES, HTML_HEADER_LEVELS, COMMON_MATH_VALUES)));
+const COMMON_INDEX_VALUES = [-1, 0, 1];
+const ALLOWED_NUMBERS = Array.from(new Set(COMMON_INDEX_VALUES.concat(HTTP_CODES, HTML_HEADER_LEVELS, COMMON_MATH_VALUES)));
 
 module.exports = {
   "extends": [
@@ -35,6 +36,9 @@ module.exports = {
       "allowThis": true
     }],
     "implicit-arrow-linebreak": 0,
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": ["**/*.test.tsx", "**/*.test.ts", "**/testing.tsx", "**/*.stories.tsx", "**/*.stories.ts", "**/setupTests.ts"]
+    }],
     "import/order": ["error", {
       "newlines-between": "always-and-inside-groups",
       "groups": [["builtin", "external"], ["internal", "sibling", "parent", "index"]]
@@ -45,6 +49,7 @@ module.exports = {
     "jsx-a11y/no-onchange": 0,
     "no-magic-numbers": [2, { "ignoreArrayIndexes": true, "ignore": ALLOWED_NUMBERS }],
     "no-use-before-define": 0,
+    "no-underscore-dangle": ["error", { "allow": ["__PRELOADED_STATE__", "__APOLLO_STATE__"] }],
     "react/no-render-return-value": 0,
     "react/prop-types": 0, // No need for prop types with Typescript
     "react-hooks/rules-of-hooks": "error",
