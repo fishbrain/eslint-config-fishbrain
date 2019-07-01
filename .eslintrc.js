@@ -52,6 +52,7 @@ module.exports = {
     "no-underscore-dangle": ["error", { "allow": ["__PRELOADED_STATE__", "__APOLLO_STATE__"] }],
     "react/no-render-return-value": 0,
     "react/prop-types": 0, // No need for prop types with Typescript
+    "react/jsx-max-props-per-line": [1, { "when": "multiline" }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
   },
