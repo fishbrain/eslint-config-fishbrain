@@ -1,3 +1,17 @@
 language: node_js
 node_js:
   - stable
+
+jobs:
+  include:
+    - stage: npm release
+      node_js: stable
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: npm
+        email: erik.gustav.dalen@gmail.com
+        api_key:
+          secure: IMN2nrboZgSRlFcUUNN41g3fNLObFv0QfBrH7nM2iB9iyCag4A1g1mPBPHYOHYUF+q3MQJLX+GCVnQe6JTl6jA5k6Vo7fOVIy29VW79uzdWfPrmA6EuGV4TkxMSr0ByKhfxbBp0ReCK1ox2bh6k69XFGyl/jzcQH5mggY8zUpNXBcKW+DLFk/74QIfTWXS1afrxAcpp3/DyT0CJ1pNHXYgnPYaPg/ocuiW7Lt9uIG7HS7JbPlq1K3H81SZJkX1/zJ3Wb3eJO+Rgdft9KQQvWOKvsuqGaGDY/BzsBOeE1Qd3SPuDLd98/dPGFuTLfeP1yugjeGPMuWguawxdBbbbNobdbtE7wKEyZ2tNJjBjnNKJGYxlUz1Z+kUVj9m/lVJDmQJnTZ+STcbTmQkNsBDqfbW07EShqM3VXnmC6v7cpZR4G3VoBicdjeMxusbsA7GzAO7lZENhBexQOKU15d/rH2CrLDNLtZfDp5aIKpDtyuAuh5bHr3hLKY8wr0lQA+U6oibMGuXJYlIPOjP8Tc6YKEFbQ9xwTdzTE9wzxgYk4siBC7OYrSyDVRNVGPRTiGqk5sQ6zRn9JQeUet2xS/saWzyngHOxtoMRMoj9q9vFRGMLeOHQR6ZTSc5XSpBrcgE8U9Huqm1tL4ealFnx1OHyW9RsEeiE+izsL3ahVneqlc8w=
+        on:
+          repo: fishbrain/eslint-config-fishbrain
+          branch: master
