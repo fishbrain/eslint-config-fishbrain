@@ -11,5 +11,5 @@ phases:
   build:
     commands:
       - docker build -t app .
-      - docker run --env="CI=${CI}" app /bin/sh -c 'yarn lint'
-      - docker run --env "REACT_APP_ENV=${FISHBRAIN_ENVIRONMENT}" --env "CODEBUILD_GIT_BRANCH=${CODEBUILD_GIT_BRANCH}" --env "NPM_TOKEN=${NPM_TOKEN}" app yarn release
+      - docker run --env="CI=${CI}" app /bin/sh -c 'npm test'
+      - docker run --env "REACT_APP_ENV=${FISHBRAIN_ENVIRONMENT}" --env "CODEBUILD_GIT_BRANCH=${CODEBUILD_GIT_BRANCH}" --env "NPM_TOKEN=${NPM_TOKEN}" app npm run release
