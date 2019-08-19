@@ -14,7 +14,7 @@ module.exports = {
     'jsx-a11y/no-onchange': 'off',
     'react/no-render-return-value': 'off',
     'react/prop-types': 'off', // No need for prop types with Typescript
-    'react/jsx-max-props-per-line': ['warning', { when: 'multiline' }],
+    'react/jsx-max-props-per-line': ['warn', { when: 'multiline' }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'no-console': 'warn',
