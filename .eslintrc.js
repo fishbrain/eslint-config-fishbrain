@@ -12,12 +12,14 @@ module.exports = {
     'jsx-a11y/label-has-for': 'off', // This is deprecated but in the recommended extension for some reason
     'jsx-a11y/media-has-caption': 'off',
     'jsx-a11y/no-onchange': 'off',
+    'no-alert': 0,
+    'no-console': 'warn',
+    'react-hooks/exhaustive-deps': 'error',
+    'react-hooks/rules-of-hooks': 'error',
+    'react/jsx-filename-extension': [1, { 'extensions': ['.tsx', '.jsx'] }],
+    'react/jsx-max-props-per-line': ['warn', { when: 'multiline' }],
     'react/no-render-return-value': 'off',
     'react/prop-types': 'off', // No need for prop types with Typescript
-    'react/jsx-max-props-per-line': ['warn', { when: 'multiline' }],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
-    'no-console': 'warn',
   },
   env: {
     browser: true,
