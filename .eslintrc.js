@@ -16,7 +16,7 @@ module.exports = {
     'no-console': 'warn',
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
-    'react/jsx-filename-extension': ['warn', { 'extensions': ['.tsx', '.jsx'] }],
+    'react/jsx-filename-extension': ['warn', { extensions: ['.tsx', '.jsx'] }],
     'react/jsx-max-props-per-line': ['warn', { when: 'multiline' }],
     'react/no-render-return-value': 'off',
     'react/prop-types': 'off', // No need for prop types with Typescript
