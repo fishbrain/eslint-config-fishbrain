@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fishbrain",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "ESLint config for Fishbrain TypeScript projects",
   "main": "eslint.json",
   "scripts": {
