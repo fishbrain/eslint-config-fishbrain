@@ -99,4 +99,6 @@ To enable ESLint in VS Code add the following to your `settings.json`:
 ## Releasing
 
 1. Update the version number in package.json
-2. Run `npm publish`
+2. Merge all changes to `develop`
+3. Run `@blip golive eslint-config-fishbrain` in Slack.
+4. Merge the created go live PR.
