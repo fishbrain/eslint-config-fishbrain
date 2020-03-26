@@ -4,7 +4,7 @@
   "description": "ESLint config for Fishbrain TypeScript projects",
   "main": "eslint.json",
   "scripts": {
-    "test": "eslint --no-ignore .eslintrc.js",
+    "test": "eslint --no-ignore .eslintrc.js"
   },
   "repository": {
     "type": "git",
