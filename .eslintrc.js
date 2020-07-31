@@ -1,7 +1,6 @@
 // eslint-disable-next-line fp/no-mutation
 module.exports = {
   extends: [
-    'airbnb',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:compat/recommended',
