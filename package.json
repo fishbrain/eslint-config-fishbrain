@@ -23,7 +23,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "eslint-config-fishbrain-base": "^2.1.0",
+    "eslint-config-fishbrain-base": "^3.0.4",
     "eslint-plugin-compat": "^4.0.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
