@@ -1,2 +1,2 @@
 // eslint-disable-next-line fp/no-mutation
-module.exports = require('./.eslintrc.js');
+module.exports = require('./.eslintrc');
