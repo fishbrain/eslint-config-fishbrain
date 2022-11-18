@@ -19,6 +19,10 @@ module.exports = {
     'react/jsx-max-props-per-line': ['warn', { when: 'multiline' }],
     'react/no-render-return-value': 'off',
     'react/prop-types': 'off', // No need for prop types with Typescript
+    'react/jsx-no-useless-fragment': 0,
+    'react/require-default-props': 0,
+    'react/jsx-boolean-value': 'off',
+    'react/destructuring-assignment': 'off',
     'react/function-component-definition': [
       'error',
       {
