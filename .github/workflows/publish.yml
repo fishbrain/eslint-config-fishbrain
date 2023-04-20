@@ -17,6 +17,6 @@ jobs:
           node-version: '18'
           check-latest: true
 
-      - uses: JS-DevTools/npm-publish@v1
+      - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
