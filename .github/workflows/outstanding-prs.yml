@@ -21,3 +21,4 @@ jobs:
           repository: eslint-config-fishbrain
           slackToken: ${{ secrets.SLACK_FISHBRAIN_BOT_TOKEN }}
           slackChannel: ${{ secrets.OUTSTANDING_PRS_SLACK_CHANNEL }}
+          basehead: master...develop
