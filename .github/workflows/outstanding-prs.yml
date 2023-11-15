@@ -11,9 +11,9 @@ on:
 jobs:
   outstanding-prs:
     name: Outstanding PRs
-    runs-on: ubuntu-latest
+    runs-on: buildjet-2vcpu-ubuntu-2204	
     steps:
-      - uses: fishbrain/outstanding-pull-requests-action@v1.0.2
+      - uses: fishbrain/outstanding-pull-requests-action@dcad1106114e0416e3dbc67de16ddc228b15be28 #v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
