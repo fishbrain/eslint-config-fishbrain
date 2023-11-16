@@ -14,6 +14,6 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - uses: JS-DevTools/npm-publish@v4b07b26a2f6e0a51846e1870223e545bae91c552 # v3.0.1
+      - uses: JS-DevTools/npm-publish@4b07b26a2f6e0a51846e1870223e545bae91c552 # v3.0.1
         with:
           token: ${{ secrets.NPM_TOKEN }}
