@@ -10,13 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup node 18
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          check-latest: true
+          node-version-file: '.nvmrc'
 
-      - uses: JS-DevTools/npm-publish@v2
+      - uses: JS-DevTools/npm-publish@v4b07b26a2f6e0a51846e1870223e545bae91c552 # v3.0.1
         with:
           token: ${{ secrets.NPM_TOKEN }}
