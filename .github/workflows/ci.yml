@@ -11,12 +11,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup node 18
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          check-latest: true
+          node-version-file: '.nvmrc'
 
       - name: Install
         run: npm ci
