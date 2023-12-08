@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fishbrain",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "ESLint config for Fishbrain TypeScript projects",
   "main": "index.js",
   "scripts": {

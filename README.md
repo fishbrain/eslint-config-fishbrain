@@ -8,8 +8,6 @@ with some extra rules for Jest tests from [eslint-plugin-jest](https://github.co
 
 For non-react TypeScript projects, see [eslint-config-fishbrain-base](https://github.com/fishbrain/eslint-config-fishbrain-base)
 
-
-
 ## Usage
 
 ```bash
@@ -100,5 +98,5 @@ To enable ESLint in VS Code add the following to your `settings.json`:
 
 1. Update the version number in package.json
 2. Merge all changes to `develop`
-3. Run `@blip golive eslint-config-fishbrain` in Slack.
+3. Run `/golive eslint-config-fishbrain` in Slack.
 4. Merge the created go live PR.
