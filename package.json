@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fishbrain",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "ESLint config for Fishbrain TypeScript projects",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
     "eslint-config-fishbrain-base": "^5.0.2",
     "eslint-plugin-compat": "^4.2.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
