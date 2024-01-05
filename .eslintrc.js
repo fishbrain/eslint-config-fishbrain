@@ -19,6 +19,7 @@ module.exports = {
     'react/jsx-max-props-per-line': ['warn', { when: 'multiline' }],
     'react/no-render-return-value': 'off',
     'react/prop-types': 'off', // No need for prop types with Typescript
+    'react/react-in-jsx-scope': 'off',
   },
   env: {
     browser: true,
