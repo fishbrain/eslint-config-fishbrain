@@ -36,5 +36,6 @@
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
-  }
+  },
+  "packageManager": "yarn@4.4.1"
 }

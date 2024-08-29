@@ -14,11 +14,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Install
-        run: npm ci
+        run: yarn
 
       - name: Test
-        run: npm run test
+        run: yarn test
         env:
           CI: true
