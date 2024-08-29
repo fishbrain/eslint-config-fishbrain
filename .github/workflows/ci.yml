@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches-ignore:
-      - master
+      - main
 
 jobs:
   test:
@@ -20,7 +20,7 @@ jobs:
       - name: Install
         run: yarn
 
-      - name: Test
+      - name: Test configs
         run: yarn test
         env:
           CI: true

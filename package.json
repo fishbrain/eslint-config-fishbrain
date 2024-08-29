@@ -1,11 +1,10 @@
 {
-  "name": "eslint-config-fishbrain",
-  "version": "5.0.6",
-  "description": "ESLint config for Fishbrain TypeScript projects",
-  "main": "index.js",
-  "scripts": {
-    "test": "eslint --no-ignore .eslintrc.js"
-  },
+  "name": "@eslint-config-fishbrain/monorepo",
+  "description": "ESLint configs for Fishbrain projects",
+  "version": "6.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fishbrain/eslint-config-fishbrain.git"
@@ -16,22 +15,8 @@
     "url": "https://github.com/fishbrain/eslint-config-fishbrain/issues"
   },
   "homepage": "https://github.com/fishbrain/eslint-config-fishbrain#readme",
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "react": "^18.2.0",
-    "typescript": "^5.2.2"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
-    "eslint-config-fishbrain-base": "^5.0.5",
-    "eslint-plugin-compat": "^4.2.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+  "scripts": {
+    "test": "yarn workspaces foreach --all run test"
   },
   "prettier": {
     "singleQuote": true,
