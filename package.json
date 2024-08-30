@@ -1,5 +1,5 @@
 {
-  "name": "@eslint-config-fishbrain/monorepo",
+  "name": "@fishbrain/eslint-config-monorepo",
   "description": "ESLint configs for Fishbrain projects",
   "version": "6.0.0",
   "workspaces": [
