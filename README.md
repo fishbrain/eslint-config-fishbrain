@@ -1,7 +1,7 @@
 # ESLint config for Fishbrain TypeScript React projects
 
-[![@fishbrain/eslint-config-base](https://badge.fury.io/js/@fishbrain/eslint-config-base.svg)](https://badge.fury.io/js/@fishbrain/eslint-config-base)
-[![@fishbrain/eslint-config-react](https://badge.fury.io/js/@fishbrain/eslint-config-react.svg)](https://badge.fury.io/js/@fishbrain/eslint-config-react)
+![Base config Version](https://img.shields.io/npm/v/%40fishbrain%2Feslint-config-base?label=%40fishbrain%2Feslint-config-base)
+![React config Version](https://img.shields.io/npm/v/%40fishbrain%2Feslint-config-react?label=%40fishbrain%2Feslint-config-react)
 
 ## Usage
 
