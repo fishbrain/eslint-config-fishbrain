@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "NodeNext",
+    "noEmit": true,
+    "strictNullChecks": true,
+  },
+  "includes": ["."]
+}

@@ -77,25 +77,9 @@ You can also add exceptions for polyfills in `.eslintrc`. See
 }
 ```
 
-### Editor settings
-
-To enable ESLint in VS Code add the following to your `settings.json`:
-
-```json
-{
-  "tslint.enable": false,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ]
-}
-```
-
 ## Releasing
 
-1. Update the version number in package.json
+1. Run `yarn version <patch|minor|major>`.
 2. Merge all changes to `develop`
 3. Run `/golive eslint-config-fishbrain` in Slack.
 4. Merge the created go live PR.
