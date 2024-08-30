@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-env:
-  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
 jobs:
   publish:
     runs-on: warp-ubuntu-latest-x64-2x
@@ -18,4 +15,5 @@ jobs:
           node-version-file: '.nvmrc'
       - name: Enable Corepack
         run: corepack enable
+      - run: npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
       - run: yarn publish
