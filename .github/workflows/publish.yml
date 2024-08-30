@@ -15,5 +15,5 @@ jobs:
           node-version-file: '.nvmrc'
       - name: Enable Corepack
         run: corepack enable
-      - run: yarn config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
+      - run: yarn config set npmAuthToken "${{ secrets.NPM_TOKEN }}"
       - run: yarn publish
