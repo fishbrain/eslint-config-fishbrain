@@ -18,6 +18,7 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./packages/base
+          access: public
 
   publish-react:
     runs-on: warp-ubuntu-latest-x64-2x
@@ -31,3 +32,4 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./packages/react
+          access: public
