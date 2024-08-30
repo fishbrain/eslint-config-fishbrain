@@ -79,7 +79,7 @@ You can also add exceptions for polyfills in `.eslintrc`. See
 
 ## Releasing
 
-1. Run `yarn version <patch|minor|major>`.
+1. Run `yarn workspaces foreach -A version <patch|minor|major>`.
 2. Merge all changes to `develop`
 3. Run `/golive eslint-config-fishbrain` in Slack.
 4. Merge the created go live PR.
