@@ -1,41 +1,53 @@
 # ESLint config for Fishbrain TypeScript React projects
 
-[![npm version](https://badge.fury.io/js/eslint-config-fishbrain.svg)](https://badge.fury.io/js/eslint-config-fishbrain)
-
-Rule set based on [Airbnb JavaScript style guide](https://github.com/airbnb/javascript)
-with some extra rules for Jest tests from [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest).
-
-For non-react TypeScript projects, see [eslint-config-fishbrain-base](https://github.com/fishbrain/eslint-config-fishbrain-base)
+[![@fishbrain/eslint-config-base](https://badge.fury.io/js/@fishbrain/eslint-config-base.svg)](https://badge.fury.io/js/@fishbrain/eslint-config-base)
+[![@fishbrain/eslint-config-react](https://badge.fury.io/js/@fishbrain/eslint-config-react.svg)](https://badge.fury.io/js/@fishbrain/eslint-config-react)
 
 ## Usage
 
+Install the dependency:
+
 ```bash
-npm install -D eslint-config-fishbrain
+yarn add -D @fishbrain/eslint-config-base
+# Or, for React projects
+yarn add -D @fishbrain/eslint-config-react
 ```
 
-In `.eslintrc` (or whatver your ESLint config file is)
+Create a file in the root of your project named `eslint.config.js`, or `eslint.config.mjs` if ESM is not enabled.
+Populate it with the following content:
+
+```js
+import { config } from '@fishbrain/eslint-config-base';
+
+export default [
+  ...config,
+];
+```
+
+Finally you can run linting with a script in `package.json`. Note that we reference ESLint from `node_modules` directly
+as it's installed as a dependency of our config and is not available by calling `eslint`:
 
 ```json
 {
-  "extends": ["eslint-config-fishbrain"]
-}
-```
-
-### Recommended tsconfig.json settings
-
-In addition to setting target, module, moduleResolution etc,
-these strictness settings are recommended.
-
-```json
-{
-  "compilerOptions": {
-    "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+  "scripts": {
+    "lint": "node_modules/.bin/eslint src some_other_dir some_file.js",
   }
 }
+```
+
+### Overriding rules
+
+Rules can be overriden in a project by editing the `eslint.config.js` file like so:
+
+```js
+export default [
+  ...config,
+  {
+    rules: {
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+    },
+  },
+];
 ```
 
 ### Recommended Prettier settings
@@ -55,26 +67,6 @@ If you want to target certain browsers you can also set them in `package.json`.
 
 ```json
   "browserslist": ["chrome 70", "last 1 versions", "not ie <= 8"]
-```
-
-You can also add exceptions for polyfills in `.eslintrc`. See
-[eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat) for more info.
-
-```json
-{
-  "settings": {
-    "polyfills": [
-      // Example of marking entire API and all methods and properties as polyfilled
-      "Promise",
-      // Example of marking specific method of an API as polyfilled
-      "WebAssembly.compile",
-      // Example of API with no property (i.e. a function)
-      "fetch",
-      // Example of instance method, must add `.prototype.`
-      "Array.prototype.push"
-    ]
-  }
-}
 ```
 
 ## Releasing
