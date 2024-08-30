@@ -1,7 +1,8 @@
 {
   "name": "@fishbrain/eslint-config-monorepo",
+  "private": true,
   "description": "ESLint configs for Fishbrain projects",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "workspaces": [
     "packages/*"
   ],
@@ -16,6 +17,7 @@
   },
   "homepage": "https://github.com/fishbrain/eslint-config-fishbrain#readme",
   "scripts": {
+    "publish": "yarn workspaces foreach -A --include \"packages/**\" npm publish --access public",
     "test": "yarn workspaces foreach --all run test"
   },
   "prettier": {
