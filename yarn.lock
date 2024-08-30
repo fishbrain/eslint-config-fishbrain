@@ -424,51 +424,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint-config-fishbrain/base@workspace:^, @eslint-config-fishbrain/base@workspace:packages/base":
-  version: 0.0.0-use.local
-  resolution: "@eslint-config-fishbrain/base@workspace:packages/base"
-  dependencies:
-    "@eslint/js": "npm:^9.9.1"
-    "@types/eslint__js": "npm:^8.42.3"
-    eslint: "npm:^9.9.1"
-    eslint-plugin-fp: "npm:^2.3.0"
-    eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-jest: "npm:^28.8.0"
-    eslint-plugin-prettier: "npm:^5.2.1"
-    jest: "npm:^29.7.0"
-    prettier: "npm:^3.3.3"
-    typescript-eslint: "npm:^8.3.0"
-  peerDependencies:
-    typescript: ^5.5.4
-  languageName: unknown
-  linkType: soft
-
-"@eslint-config-fishbrain/monorepo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@eslint-config-fishbrain/monorepo@workspace:."
-  languageName: unknown
-  linkType: soft
-
-"@eslint-config-fishbrain/react@workspace:packages/react":
-  version: 0.0.0-use.local
-  resolution: "@eslint-config-fishbrain/react@workspace:packages/react"
-  dependencies:
-    "@eslint-config-fishbrain/base": "workspace:^"
-    "@eslint/js": "npm:^9.9.1"
-    eslint: "npm:^9.9.1"
-    eslint-plugin-compat: "npm:^6.0.0"
-    eslint-plugin-jsx-a11y: "npm:^6.9.0"
-    eslint-plugin-react: "npm:^7.35.0"
-    eslint-plugin-react-hooks: "npm:^4.6.2"
-    jest: "npm:^29.7.0"
-    react: "npm:^18.3.1"
-    typescript: "npm:^5.5.4"
-    typescript-eslint: "npm:^8.3.0"
-  peerDependencies:
-    react: ^18
-  languageName: unknown
-  linkType: soft
-
 "@eslint/config-array@npm:^0.18.0":
   version: 0.18.0
   resolution: "@eslint/config-array@npm:0.18.0"
@@ -510,6 +465,51 @@ __metadata:
   checksum: 10c0/e9885532ea70e483fb007bf1275968b05bb15ebaa506d98560c41a41220d33d342e19023d5f2939fed6eb59676c1bda5c847c284b4b55fce521d282004da4dda
   languageName: node
   linkType: hard
+
+"@fishbrain/eslint-config-base@workspace:^, @fishbrain/eslint-config-base@workspace:packages/base":
+  version: 0.0.0-use.local
+  resolution: "@fishbrain/eslint-config-base@workspace:packages/base"
+  dependencies:
+    "@eslint/js": "npm:^9.9.1"
+    "@types/eslint__js": "npm:^8.42.3"
+    eslint: "npm:^9.9.1"
+    eslint-plugin-fp: "npm:^2.3.0"
+    eslint-plugin-import: "npm:^2.29.1"
+    eslint-plugin-jest: "npm:^28.8.0"
+    eslint-plugin-prettier: "npm:^5.2.1"
+    jest: "npm:^29.7.0"
+    prettier: "npm:^3.3.3"
+    typescript-eslint: "npm:^8.3.0"
+  peerDependencies:
+    typescript: ^5.5.4
+  languageName: unknown
+  linkType: soft
+
+"@fishbrain/eslint-config-monorepo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@fishbrain/eslint-config-monorepo@workspace:."
+  languageName: unknown
+  linkType: soft
+
+"@fishbrain/eslint-config-react@workspace:packages/react":
+  version: 0.0.0-use.local
+  resolution: "@fishbrain/eslint-config-react@workspace:packages/react"
+  dependencies:
+    "@eslint/js": "npm:^9.9.1"
+    "@fishbrain/eslint-config-base": "workspace:^"
+    eslint: "npm:^9.9.1"
+    eslint-plugin-compat: "npm:^6.0.0"
+    eslint-plugin-jsx-a11y: "npm:^6.9.0"
+    eslint-plugin-react: "npm:^7.35.0"
+    eslint-plugin-react-hooks: "npm:^4.6.2"
+    jest: "npm:^29.7.0"
+    react: "npm:^18.3.1"
+    typescript: "npm:^5.5.4"
+    typescript-eslint: "npm:^8.3.0"
+  peerDependencies:
+    react: ^18
+  languageName: unknown
+  linkType: soft
 
 "@humanwhocodes/module-importer@npm:^1.0.1":
   version: 1.0.1
