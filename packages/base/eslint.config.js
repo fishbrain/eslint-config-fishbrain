@@ -59,7 +59,11 @@ export default tseslint.config(
       '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
-        { argsIgnorePattern: '^_' },
+        {
+          ignoreRestSiblings: true,
+          varsIgnorePattern: '^_',
+          argsIgnorePattern: '^_',
+        },
       ],
       '@typescript-eslint/no-useless-constructor': 'error',
       '@typescript-eslint/promise-function-async': 'error',
