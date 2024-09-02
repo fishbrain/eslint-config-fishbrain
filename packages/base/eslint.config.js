@@ -36,27 +36,8 @@ export default tseslint.config(
   {
     plugins: { prettier: prettierPlugin },
     rules: {
-      // Core rules replaced by Typescript rules
-      'no-use-before-define': 'off',
-      'consistent-return': 'off', // TypeScript takes care of checking return
-      // 'import/no-unresolved': 'off', // Doesn't work properly with TypeScript // TODO:
-      'no-extra-parens': 'off',
-
-      // Additional Fishbrain rules
-      '@typescript-eslint/await-thenable': 'error',
-      '@typescript-eslint/ban-ts-ignore': 'off',
-      // This rule required so many exceptions that it was getting difficult to maintain. So
-      // just name things sensibly :)
-      '@typescript-eslint/naming-convention': 'off',
-      '@typescript-eslint/explicit-member-accessibility': 'off',
-      '@typescript-eslint/interface-name-prefix': 'off',
-      // Noop functions are a common pattern we use during testing, so we don't want to enable it.
-      '@typescript-eslint/no-empty-function': 'off',
+      '@typescript-eslint/no-empty-function': 'off', // Noop functions are a common pattern we use during testing, so we don't want to enable it.
       '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
-      '@typescript-eslint/no-extraneous-class': 'error',
-      '@typescript-eslint/no-floating-promises': 'error',
-      '@typescript-eslint/no-for-in-array': 'error',
-      '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -65,27 +46,22 @@ export default tseslint.config(
           argsIgnorePattern: '^_',
         },
       ],
-      '@typescript-eslint/no-useless-constructor': 'error',
       '@typescript-eslint/promise-function-async': 'error',
-      '@typescript-eslint/triple-slash-reference': [
+      '@typescript-eslint/restrict-template-expressions': [
         'error',
-        { types: 'prefer-import' },
+        {
+          allowAny: true,
+          allowNumber: true,
+        },
       ],
-      '@typescript-eslint/prefer-readonly': 'error',
-
-      // Warns if a type assertion does not change the type of an expression
-      // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
-      '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-
-      // Enforce includes method over indexOf method
-      // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-includes.md
-      '@typescript-eslint/prefer-includes': 'error',
-
-      // Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings
-      // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
-      '@typescript-eslint/prefer-string-starts-ends-with': 'error',
-
       curly: ['error', 'all'],
+      'max-lines': ['error', { max: 300, skipComments: true }],
+      'no-magic-numbers': [
+        'error',
+        { ignoreArrayIndexes: true, ignore: ALLOWED_NUMBERS },
+      ],
+      'prettier/prettier': 'error',
+      'require-atomic-updates': 'error',
 
       // 'fp/no-delete': 'error',
       // 'fp/no-let': 'error',
@@ -136,23 +112,6 @@ export default tseslint.config(
       //     tsx: 'never',
       //   },
       // ],
-      'max-lines': ['error', { max: 300, skipComments: true }],
-
-      // Disallow Magic Numbers
-      // https://eslint.org/docs/rules/no-magic-numbers
-      'no-magic-numbers': [
-        'error',
-        { ignoreArrayIndexes: true, ignore: ALLOWED_NUMBERS },
-      ],
-
-      // disallow the use of console
-      // https://eslint.org/docs/rules/no-console
-      'no-console': 'off',
-      'prettier/prettier': 'error',
-
-      // Disallow assignments that can lead to race conditions due to usage of await or yield
-      // https://eslint.org/docs/rules/require-atomic-updates
-      'require-atomic-updates': 'error',
 
       // no export from test file
       // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
