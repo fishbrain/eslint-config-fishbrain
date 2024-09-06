@@ -12,7 +12,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@eslint/js": "^9.9.1",
+    "@eslint/js": "^9.10.0",
     "@fishbrain/eslint-config-base": "workspace:^",
     "eslint": "^9.9.1",
     "eslint-plugin-compat": "^6.0.0",
