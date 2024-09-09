@@ -137,3 +137,16 @@ export const config = tseslint.config(
   jestPlugin.configs['flat/recommended'],
   customRules,
 );
+
+/* Use this if your project is not well typed yet (e.g. lots of `any` types). Ideally you should not use this, but in some cases it may be necessary. */
+export const looseTypes = [
+  {
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unsafe-argument': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+      '@typescript-eslint/no-unsafe-return': 'off',
+    },
+  },
+];
