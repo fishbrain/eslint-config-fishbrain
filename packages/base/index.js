@@ -3,7 +3,7 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import prettierPlugin from 'eslint-plugin-prettier';
 
-const HTTP_CODES = [200, 201, 204, 301, 302, 400, 401, 404, 422, 500];
+const HTTP_CODES = [200, 201, 204, 301, 302, 400, 401, 403, 404, 422, 500];
 const HTML_HEADER_LEVELS = [1, 2, 3, 4, 5, 6];
 const COMMON_MATH_VALUES = [24, 60, 100];
 const COMMON_INDEX_VALUES = [-1, 0, 1];
@@ -60,73 +60,6 @@ const customRules = {
     ],
     'prettier/prettier': 'error',
     'require-atomic-updates': 'error',
-
-    // 'fp/no-delete': 'error',
-    // 'fp/no-let': 'error',
-    // 'fp/no-loops': 'error',
-    // 'fp/no-mutating-assign': 'error',
-    // 'fp/no-mutation': [
-    //   'error',
-    //   {
-    //     allowThis: true,
-    //   },
-    // ],
-    // TODO:
-    // 'import/named': 'off', // Redundant when used with Typescript.
-    // 'import/no-extraneous-dependencies': [
-    //   'error',
-    //   {
-    //     devDependencies: [
-    //       '**/*.test.tsx',
-    //       '**/*.test.ts',
-    //       '**/testing.tsx',
-    //       '**/*.stories.tsx',
-    //       '**/*.stories.ts',
-    //       '**/setupTests.ts',
-    //       '**/webpack.config.{js,ts}', // webpack config
-    //       '**/webpack.config.*.{js,ts}', // webpack config
-    //     ],
-    //   },
-    // ],
-    // 'import/order': [
-    //   'error',
-    //   {
-    //     'newlines-between': 'always-and-inside-groups',
-    //     groups: [
-    //       ['builtin', 'external'],
-    //       ['internal', 'sibling', 'parent', 'index'],
-    //     ],
-    //   },
-    // ],
-    // 'import/prefer-default-export': 'off',
-    // // Allow typescript imports, airbnb has disallowed it
-    // 'import/extensions': [
-    //   'error',
-    //   'ignorePackages',
-    //   {
-    //     js: 'never',
-    //     jsx: 'never',
-    //     ts: 'never',
-    //     tsx: 'never',
-    //   },
-    // ],
-
-    // no export from test file
-    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
-    // 'jest/no-export': 'error',
-
-    // TODO: Below is the "recommended" rules from eslint-plugin-import
-    // analysis/correctness
-    // 'import/no-unresolved': 'error', // TODO: dupe
-    // 'import/named': 'error', // TODO: dupe
-    // 'import/namespace': 'error',
-    // 'import/default': 'error',
-    // 'import/export': 'error',
-
-    // // red flags (thus, warnings)
-    // 'import/no-named-as-default': 'off', // TODO: Should error, but it doesn't work with eslint9 just yet.
-    // 'import/no-named-as-default-member': 'off', // TODO: Should error, but it doesn't work with eslint9 just yet.
-    // 'import/no-duplicates': 'warn',
   },
 };
 
