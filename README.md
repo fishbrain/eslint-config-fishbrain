@@ -51,6 +51,23 @@ export default [
 ];
 ```
 
+### Ignoring files
+
+You can ignore files using a glob pattern. Note that the ignores object needs to be on its own without other rules to
+be applied globally to all rules.
+
+```js
+export default [
+  {
+    ignores: ['src/__generated__/**/*', 'setupTests.js'],
+  },
+  ...config,
+  {
+    // Other custom rules and config
+  },
+];
+```
+
 ### Recommended Prettier settings
 
 Add this to `package.json` to get correct config for [prettier](https://prettier.io/)
