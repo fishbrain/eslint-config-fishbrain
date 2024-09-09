@@ -9,6 +9,7 @@ import globals from 'globals';
 import {
   config as baseConfig,
   configWithoutJest as baseConfigWithoutJest,
+  looseTypes as baseLooseTypes,
 } from '@fishbrain/eslint-config-base';
 
 const reactConfig = [
@@ -56,3 +57,5 @@ export const configWithoutJest = tseslint.config(
   ...reactConfig,
   customRules,
 );
+
+export const looseTypes = baseLooseTypes;

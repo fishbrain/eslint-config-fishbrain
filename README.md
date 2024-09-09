@@ -17,14 +17,15 @@ Create a file in the root of your project named `eslint.config.js`, or `eslint.c
 Populate it with the following content:
 
 ```js
-import { config } from '@fishbrain/eslint-config-base';
+import { config, looseTypes, configWithoutJest } from '@fishbrain/eslint-config-base';
 
 export default [
-  ...config,
+  ...config, // or configWithoutJest if the project doesn't use Jest.
+  ...looseTypes, // Use this if the project is poorly typed.
 ];
 ```
 
-Finally you can run linting with a script in `package.json`. Note that we reference ESLint from `node_modules` directly
+You can run linting with a script in `package.json`. Note that we reference ESLint from `node_modules` directly
 as it's installed as a dependency of our config and is not available by calling `eslint`:
 
 ```json
