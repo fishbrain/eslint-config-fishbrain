@@ -3,7 +3,9 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import prettierPlugin from 'eslint-plugin-prettier';
 
-const HTTP_CODES = [200, 201, 204, 301, 302, 400, 401, 403, 404, 422, 500];
+const HTTP_CODES = [
+  200, 201, 204, 301, 302, 307, 308, 400, 401, 403, 404, 409, 410, 422, 500,
+];
 const HTML_HEADER_LEVELS = [1, 2, 3, 4, 5, 6];
 const COMMON_MATH_VALUES = [24, 60, 100];
 const COMMON_INDEX_VALUES = [-1, 0, 1];
