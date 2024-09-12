@@ -1,7 +1,7 @@
 {
   "name": "@fishbrain/eslint-config-react",
   "packageManager": "yarn@4.4.1",
-  "version": "6.2.1",
+  "version": "6.3.0",
   "type": "module",
   "exports": "./index.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "@fishbrain/eslint-config-base": "workspace:^",
     "eslint": "^9.19.0",
     "eslint-plugin-compat": "^6.0.2",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0",
