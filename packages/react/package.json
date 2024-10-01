@@ -18,7 +18,7 @@
     "eslint-plugin-compat": "^6.0.1",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-react": "^7.36.1",
-    "globals": "^15.9.0",
+    "globals": "^15.10.0",
     "typescript-eslint": "^8.7.0"
   },
   "peerDependencies": {
