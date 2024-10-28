@@ -6,6 +6,7 @@ import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import compatPlugin from 'eslint-plugin-compat';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
+import testingLibraryPlugin from 'eslint-plugin-testing-library';
 
 import {
   config as baseConfig,
@@ -35,6 +36,8 @@ const reactConfig = [
   },
 ];
 
+const testingConfig = [testingLibraryPlugin.configs['flat/react']];
+
 const customRules = {
   rules: {
     // 'jsx-a11y/label-has-for': 'off', // This is deprecated but in the recommended extension for some reason // TODO: Check if needed
@@ -55,6 +58,7 @@ const customRules = {
 export const config = tseslint.config(
   ...baseConfig,
   ...reactConfig,
+  ...testingConfig,
   customRules,
 );
 

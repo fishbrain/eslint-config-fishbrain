@@ -1,11 +1,11 @@
 {
   "name": "@fishbrain/eslint-config-react",
   "packageManager": "yarn@4.4.1",
-  "version": "6.0.11",
+  "version": "6.1.0",
   "type": "module",
   "exports": "./index.js",
   "scripts": {
-    "test": "eslint  index.js eslint.config.js"
+    "test": "eslint index.js eslint.config.js"
   },
   "devDependencies": {
     "react": "^18.3.1",
@@ -19,6 +19,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-testing-library": "^6.4.0",
     "globals": "^15.11.0",
     "typescript-eslint": "^8.11.0"
   },
