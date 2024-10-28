@@ -55,6 +55,13 @@ const customRules = {
   },
 };
 
+export const configWithoutTypescript = [
+  ...baseConfig,
+  ...reactConfig,
+  ...testingConfig,
+  customRules,
+];
+
 export const config = tseslint.config(
   ...baseConfig,
   ...reactConfig,
