@@ -71,16 +71,19 @@ const customRulesTypescript = {
 };
 
 export const configWithoutTypescript = [
-  ...baseConfig,
+  eslint.configs.recommended,
+  { plugins: { prettier: prettierPlugin } },
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   jestPlugin.configs['flat/recommended'],
   customRules,
 ];
+
 export const configWithoutJest = tseslint.config(
   ...baseConfig,
   customRules,
   customRulesTypescript,
 );
+
 export const config = tseslint.config(
   ...baseConfig,
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
