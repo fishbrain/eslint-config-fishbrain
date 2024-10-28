@@ -4,6 +4,7 @@ import tseslint from 'typescript-eslint';
 import reactPlugin from 'eslint-plugin-react';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import compatPlugin from 'eslint-plugin-compat';
+import pluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
 import {
@@ -25,6 +26,13 @@ const reactConfig = [
   },
   jsxA11yPlugin.flatConfigs.recommended,
   compatPlugin.configs['flat/recommended'],
+  {
+    files: ['**/**/*.{js,ts,jsx,tsx}'],
+    plugins: {
+      'react-hooks': pluginReactHooks,
+    },
+    rules: pluginReactHooks.configs.recommended.rules,
+  },
 ];
 
 const customRules = {
@@ -39,10 +47,8 @@ const customRules = {
     'react/no-render-return-value': 'off',
     'react/prop-types': 'off', // No need for prop types with Typescript
     'react/react-in-jsx-scope': 'off',
-
-    // TODO: Disabled until https://github.com/facebook/react/issues/28313 is resolved.
-    // 'react-hooks/exhaustive-deps': 'error',
-    // 'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
+    'react-hooks/rules-of-hooks': 'error',
   },
 };
 
