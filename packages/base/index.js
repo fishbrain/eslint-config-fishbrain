@@ -36,6 +36,19 @@ const baseConfig = [
 
 const customRules = {
   rules: {
+    curly: ['error', 'all'],
+    'max-lines': ['error', { max: 300, skipComments: true }],
+    'no-magic-numbers': [
+      'error',
+      { ignoreArrayIndexes: true, ignore: ALLOWED_NUMBERS },
+    ],
+    'prettier/prettier': 'error',
+    'require-atomic-updates': 'error',
+  },
+};
+
+const customRulesTypescript = {
+  rules: {
     '@typescript-eslint/no-empty-function': 'off', // Noop functions are a common pattern we use during testing, so we don't want to enable it.
     '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
     '@typescript-eslint/no-unused-vars': [
@@ -54,23 +67,26 @@ const customRules = {
         allowNumber: true,
       },
     ],
-    curly: ['error', 'all'],
-    'max-lines': ['error', { max: 300, skipComments: true }],
-    'no-magic-numbers': [
-      'error',
-      { ignoreArrayIndexes: true, ignore: ALLOWED_NUMBERS },
-    ],
-    'prettier/prettier': 'error',
-    'require-atomic-updates': 'error',
   },
 };
 
-export const configWithoutJest = tseslint.config(...baseConfig, customRules);
+export const configWithoutTypescript = [
+  ...baseConfig,
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
+  jestPlugin.configs['flat/recommended'],
+  customRules,
+];
+export const configWithoutJest = tseslint.config(
+  ...baseConfig,
+  customRules,
+  customRulesTypescript,
+);
 export const config = tseslint.config(
   ...baseConfig,
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   jestPlugin.configs['flat/recommended'],
   customRules,
+  customRulesTypescript,
 );
 
 /* Use this if your project is not well typed yet (e.g. lots of `any` types). Ideally you should not use this, but in some cases it may be necessary. */
