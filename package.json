@@ -2,7 +2,7 @@
   "name": "@fishbrain/eslint-config-monorepo",
   "private": true,
   "description": "ESLint configs for Fishbrain projects",
-  "version": "6.1.1",
+  "version": "6.1.2",
   "workspaces": [
     "packages/*"
   ],
