@@ -16,14 +16,13 @@ on:
 
 jobs:
   semgrep:
-    name: Scan
+    name: Semgrep
     runs-on: warp-ubuntu-latest-x64-2x
     timeout-minutes: 15 # There's been issues with some runs hanging. This times out after 15 minutes instead of the default 360.
     env:
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
     container:
       image: semgrep/semgrep
-    if: (github.actor != 'dependabot[bot]')
     steps:
       - uses: actions/checkout@v4
       - run: semgrep ci
