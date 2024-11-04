@@ -5,6 +5,11 @@ version: 2
 
 "updates":
 - "directory": "/"
+  "groups":
+    "eslint":
+      "patterns":
+      - "@eslint/js"
+      - "eslint"
   "ignore":
   - "dependency-name": "@types/node"
     "update-types":
