@@ -529,7 +529,7 @@ __metadata:
     typescript: "npm:^5.7.2"
     typescript-eslint: "npm:^8.18.2"
   peerDependencies:
-    react: ^18
+    react: ^19
   languageName: unknown
   linkType: soft
 
