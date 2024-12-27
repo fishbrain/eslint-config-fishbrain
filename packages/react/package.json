@@ -1,29 +1,29 @@
 {
   "name": "@fishbrain/eslint-config-react",
   "packageManager": "yarn@4.4.1",
-  "version": "6.1.3",
+  "version": "6.2.0",
   "type": "module",
   "exports": "./index.js",
   "scripts": {
     "test": "eslint index.js eslint.config.js"
   },
   "devDependencies": {
-    "react": "^18.3.1",
-    "typescript": "^5.6.3"
+    "react": "^19.0.0",
+    "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@eslint/js": "^9.13.0",
+    "@eslint/js": "^9.17.0",
     "@fishbrain/eslint-config-base": "workspace:^",
-    "eslint": "^9.13.0",
-    "eslint-plugin-compat": "^6.0.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-compat": "^6.0.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-testing-library": "^6.4.0",
-    "globals": "^15.11.0",
-    "typescript-eslint": "^8.11.0"
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-testing-library": "^7.1.1",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.18.2"
   },
   "peerDependencies": {
-    "react": "^18"
+    "react": "^19"
   }
 }
