@@ -8,8 +8,8 @@
     "test": "eslint index.js eslint.config.js"
   },
   "dependencies": {
-    "@eslint/js": "^9.21.0",
-    "eslint": "^9.21.0",
+    "@eslint/js": "^9.22.0",
+    "eslint": "^9.22.0",
     "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-prettier": "^5.2.3",
     "prettier": "^3.5.3",
