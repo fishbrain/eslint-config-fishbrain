@@ -1,7 +1,9 @@
 import jestPlugin from 'eslint-plugin-jest';
 import eslint from '@eslint/js';
+// eslint-disable-next-line import/no-unresolved
 import tseslint from 'typescript-eslint';
 import prettierPlugin from 'eslint-plugin-prettier';
+import importPlugin from 'eslint-plugin-import';
 
 const HTTP_CODES = [
   200, 201, 204, 301, 302, 307, 308, 400, 401, 403, 404, 409, 410, 422, 500,
@@ -32,6 +34,8 @@ const baseConfig = [
     },
   },
   { plugins: { prettier: prettierPlugin } },
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  importPlugin.flatConfigs.recommended,
 ];
 
 const customRules = {
@@ -65,11 +69,12 @@ const customRules = {
   },
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 export const configWithoutJest = tseslint.config(...baseConfig, customRules);
 
 export const config = tseslint.config(
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   ...baseConfig,
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   jestPlugin.configs['flat/recommended'],
   customRules,
 );
