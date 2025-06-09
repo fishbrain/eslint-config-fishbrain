@@ -36,6 +36,8 @@ const baseConfig = [
   { plugins: { prettier: prettierPlugin } },
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   importPlugin.flatConfigs.recommended,
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  importPlugin.flatConfigs.typescript,
 ];
 
 const customRules = {
