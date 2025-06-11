@@ -610,7 +610,7 @@ __metadata:
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
     eslint-plugin-react: "npm:^7.37.5"
     eslint-plugin-react-hooks: "npm:^5.2.0"
-    eslint-plugin-testing-library: "npm:^7.3.0"
+    eslint-plugin-testing-library: "npm:^7.5.1"
     globals: "npm:^16.2.0"
     react: "npm:^19.1.0"
     typescript: "npm:^5.8.3"
@@ -3000,15 +3000,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-testing-library@npm:^7.3.0":
-  version: 7.3.0
-  resolution: "eslint-plugin-testing-library@npm:7.3.0"
+"eslint-plugin-testing-library@npm:^7.5.1":
+  version: 7.5.1
+  resolution: "eslint-plugin-testing-library@npm:7.5.1"
   dependencies:
     "@typescript-eslint/scope-manager": "npm:^8.15.0"
     "@typescript-eslint/utils": "npm:^8.15.0"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
-  checksum: 10c0/febd1823838813bf5ebd122d1da97b3059c181a9586cc8b378870d20d27383342c4536ae86d51a4c2a95b1085167cdf951a5c83ff22c6087d7e9357a10e986a5
+  checksum: 10c0/c6165af44ca9c1061349afd781c000311f902f7b7fa4925361f28e17f4d3fc2c615a8d679ff7f5267793e2985542c2b08d1f102db117087d2c4cff8d542bd92c
   languageName: node
   linkType: hard
 
