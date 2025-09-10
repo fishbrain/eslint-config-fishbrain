@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version-file: '.nvmrc'
+          package-manager-cache: false
       - name: Enable Corepack
         run: corepack enable
       - run: yarn config set npmAuthToken "${{ secrets.NPM_TOKEN }}"
