@@ -11,13 +11,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
-        with:
-          node-version-file: '.nvmrc'
-          package-manager-cache: false
       - name: Enable Corepack
         run: corepack enable
-
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
       - name: Install
         run: yarn
 
