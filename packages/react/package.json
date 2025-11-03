@@ -8,8 +8,8 @@
     "test": "eslint index.js eslint.config.js"
   },
   "devDependencies": {
-    "react": "^19.2.0",
-    "typescript": "^5.9.3"
+    "react": "19.2.0",
+    "typescript": "5.9.3"
   },
   "dependencies": {
     "@eslint/js": "^9.37.0",
