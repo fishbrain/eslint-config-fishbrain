@@ -1,13 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument */
 
-// eslint-disable-next-line import/no-unresolved
-import tseslint from 'typescript-eslint';
 import reactPlugin from 'eslint-plugin-react';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import compatPlugin from 'eslint-plugin-compat';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 import testingLibraryPlugin from 'eslint-plugin-testing-library';
+// eslint-disable-next-line import/no-unresolved
+import { defineConfig } from 'eslint/config';
 
 import {
   config as baseConfig,
@@ -56,14 +56,14 @@ const customRules = {
   },
 };
 
-export const config = tseslint.config(
+export const config = defineConfig(
   ...baseConfig,
   ...reactConfig,
   ...testingConfig,
   customRules,
 );
 
-export const configWithoutJest = tseslint.config(
+export const configWithoutJest = defineConfig(
   ...baseConfigWithoutJest,
   ...reactConfig,
   customRules,
