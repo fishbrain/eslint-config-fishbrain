@@ -3636,14 +3636,14 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-testing-library@npm:^7.12.0":
-  version: 7.13.5
-  resolution: "eslint-plugin-testing-library@npm:7.13.5"
+  version: 7.14.0
+  resolution: "eslint-plugin-testing-library@npm:7.14.0"
   dependencies:
     "@typescript-eslint/scope-manager": "npm:^8.15.0"
     "@typescript-eslint/utils": "npm:^8.15.0"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
-  checksum: 10c0/c4615606b35fbbb0482f93c0ece9cc1b5228504698f7d3c9cb3c1fca1120701274121a2cb9e95445a39a132377c286267cdcaab4d2118cbfda071990878dec3f
+  checksum: 10c0/caae5b90e3a7450da05207dd0b6eb5c4a8aca73902671a5a4e6668d8dc58bcca74f9de889e2d831b509925c8c519844523995251380fd0f3b2bb36b4a5b5c7c4
   languageName: node
   linkType: hard
 
