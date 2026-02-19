@@ -861,7 +861,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.39.2, @eslint/js@npm:^9.39.1":
+"@eslint/js@npm:9.39.2":
   version: 9.39.2
   resolution: "@eslint/js@npm:9.39.2"
   checksum: 10c0/00f51c52b04ac79faebfaa65a9652b2093b9c924e945479f1f3945473f78aee83cbc76c8d70bbffbf06f7024626575b16d97b66eab16182e1d0d39daff2f26f5
@@ -889,14 +889,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fishbrain/eslint-config-base@workspace:packages/base"
   dependencies:
-    "@eslint/js": "npm:^9.39.1"
-    eslint: "npm:^9.39.1"
-    eslint-plugin-import: "npm:^2.32.0"
-    eslint-plugin-jest: "npm:^29.12.1"
-    eslint-plugin-prettier: "npm:^5.5.4"
+    "@eslint/js": "npm:9.39.2"
+    eslint: "npm:9.39.2"
+    eslint-plugin-import: "npm:2.32.0"
+    eslint-plugin-jest: "npm:29.13.0"
+    eslint-plugin-prettier: "npm:5.5.4"
     jest: "npm:30.2.0"
-    prettier: "npm:^3.8.0"
-    typescript-eslint: "npm:^8.54.0"
+    prettier: "npm:3.8.1"
+    typescript-eslint: "npm:8.56.0"
   peerDependencies:
     typescript: ">=5.0.0"
   languageName: unknown
@@ -912,19 +912,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fishbrain/eslint-config-react@workspace:packages/react"
   dependencies:
-    "@eslint/js": "npm:^9.39.1"
+    "@eslint/js": "npm:9.39.2"
     "@fishbrain/eslint-config-base": "workspace:^"
-    eslint: "npm:^9.39.1"
-    eslint-plugin-compat: "npm:^6.1.0"
-    eslint-plugin-import: "npm:^2.32.0"
-    eslint-plugin-jsx-a11y: "npm:^6.10.2"
-    eslint-plugin-react: "npm:^7.37.5"
-    eslint-plugin-react-hooks: "npm:^7.0.0"
-    eslint-plugin-testing-library: "npm:^7.12.0"
-    globals: "npm:^17.0.0"
+    eslint: "npm:9.39.2"
+    eslint-plugin-compat: "npm:6.1.0"
+    eslint-plugin-import: "npm:2.32.0"
+    eslint-plugin-jsx-a11y: "npm:6.10.2"
+    eslint-plugin-react: "npm:7.37.5"
+    eslint-plugin-react-hooks: "npm:7.0.1"
+    eslint-plugin-testing-library: "npm:7.15.4"
+    globals: "npm:17.0.0"
     react: "npm:19.2.4"
     typescript: "npm:5.9.3"
-    typescript-eslint: "npm:^8.54.0"
+    typescript-eslint: "npm:8.56.0"
   peerDependencies:
     react: ^19
   languageName: unknown
@@ -3531,7 +3531,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-compat@npm:^6.1.0":
+"eslint-plugin-compat@npm:6.1.0":
   version: 6.1.0
   resolution: "eslint-plugin-compat@npm:6.1.0"
   dependencies:
@@ -3549,7 +3549,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.32.0":
+"eslint-plugin-import@npm:2.32.0":
   version: 2.32.0
   resolution: "eslint-plugin-import@npm:2.32.0"
   dependencies:
@@ -3578,7 +3578,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^29.12.1":
+"eslint-plugin-jest@npm:29.13.0":
   version: 29.13.0
   resolution: "eslint-plugin-jest@npm:29.13.0"
   dependencies:
@@ -3599,7 +3599,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsx-a11y@npm:^6.10.2":
+"eslint-plugin-jsx-a11y@npm:6.10.2":
   version: 6.10.2
   resolution: "eslint-plugin-jsx-a11y@npm:6.10.2"
   dependencies:
@@ -3624,7 +3624,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^5.5.4":
+"eslint-plugin-prettier@npm:5.5.4":
   version: 5.5.4
   resolution: "eslint-plugin-prettier@npm:5.5.4"
   dependencies:
@@ -3644,7 +3644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:^7.0.0":
+"eslint-plugin-react-hooks@npm:7.0.1":
   version: 7.0.1
   resolution: "eslint-plugin-react-hooks@npm:7.0.1"
   dependencies:
@@ -3659,7 +3659,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.37.5":
+"eslint-plugin-react@npm:7.37.5":
   version: 7.37.5
   resolution: "eslint-plugin-react@npm:7.37.5"
   dependencies:
@@ -3687,7 +3687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-testing-library@npm:^7.12.0":
+"eslint-plugin-testing-library@npm:7.15.4":
   version: 7.15.4
   resolution: "eslint-plugin-testing-library@npm:7.15.4"
   dependencies:
@@ -3737,7 +3737,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9.39.1":
+"eslint@npm:9.39.2":
   version: 9.39.2
   resolution: "eslint@npm:9.39.2"
   dependencies:
@@ -4290,6 +4290,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"globals@npm:17.0.0":
+  version: 17.0.0
+  resolution: "globals@npm:17.0.0"
+  checksum: 10c0/e3c169fdcb0fc6755707b697afb367bea483eb29992cfc0de1637382eb893146e17f8f96db6d7453e3696b478a7863ae2000e6c71cd2f4061410285106d3847a
+  languageName: node
+  linkType: hard
+
 "globals@npm:^11.1.0":
   version: 11.12.0
   resolution: "globals@npm:11.12.0"
@@ -4308,13 +4315,6 @@ __metadata:
   version: 15.15.0
   resolution: "globals@npm:15.15.0"
   checksum: 10c0/f9ae80996392ca71316495a39bec88ac43ae3525a438b5626cd9d5ce9d5500d0a98a266409605f8cd7241c7acf57c354a48111ea02a767ba4f374b806d6861fe
-  languageName: node
-  linkType: hard
-
-"globals@npm:^17.0.0":
-  version: 17.0.0
-  resolution: "globals@npm:17.0.0"
-  checksum: 10c0/e3c169fdcb0fc6755707b697afb367bea483eb29992cfc0de1637382eb893146e17f8f96db6d7453e3696b478a7863ae2000e6c71cd2f4061410285106d3847a
   languageName: node
   linkType: hard
 
@@ -6404,7 +6404,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.8.0":
+"prettier@npm:3.8.1":
   version: 3.8.1
   resolution: "prettier@npm:3.8.1"
   bin:
@@ -7421,7 +7421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.54.0":
+"typescript-eslint@npm:8.56.0":
   version: 8.56.0
   resolution: "typescript-eslint@npm:8.56.0"
   dependencies:
