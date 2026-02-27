@@ -3,8 +3,15 @@
     "customManagers": [],
     "description": "This file is managed by Terraform. Manual changes will be overwritten. To update this file, look for the `renovate_config` module being used in the `repositories` directory in our Terraform repo.",
     "extends": [
-        "config:best-practices",
+        "config:recommended",
+        "docker:pinDigests",
+        "helpers:pinGitHubActionDigests",
+        ":configMigration",
+        ":pinDevDependencies",
+        ":pinDependencies",
+        "abandonments:recommended",
         ":rebaseStalePrs",
+        "helpers:pinGitHubActionDigestsToSemver",
         ":automergePatch"
     ],
     "hostRules": [],
@@ -12,10 +19,12 @@
         "node_modules/**",
         ".github/workflows/semgrep.yml"
     ],
+    "internalChecksFilter": "strict",
     "minimumReleaseAge": "7 days",
     "packageRules": [
         {
             "automerge": true,
+            "labels": [],
             "matchPackageNames": [
                 "@types/**"
             ],
@@ -31,6 +40,7 @@
             "extends": [
                 "packages:linters"
             ],
+            "labels": [],
             "matchUpdateTypes": [
                 "minor",
                 "patch",
@@ -43,6 +53,7 @@
             "extends": [
                 "packages:test"
             ],
+            "labels": [],
             "matchUpdateTypes": [
                 "minor",
                 "patch",
@@ -52,5 +63,8 @@
         }
     ],
     "prConcurrentLimit": 10,
-    "reviewersFromCodeOwners": true
+    "reviewersFromCodeOwners": true,
+    "schedule": [
+        "* * * * 1-5"
+    ]
 }
