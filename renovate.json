@@ -60,6 +60,19 @@
                 "pin",
                 "digest"
             ]
+        },
+        {
+            "automerge": true,
+            "labels": [],
+            "matchPackageNames": [
+                "actions/setup-node"
+            ],
+            "matchUpdateTypes": [
+                "minor",
+                "patch",
+                "pin",
+                "digest"
+            ]
         }
     ],
     "prConcurrentLimit": 10,
