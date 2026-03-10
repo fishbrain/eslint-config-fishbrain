@@ -15,7 +15,7 @@
     "@eslint/js": "9.39.3",
     "@fishbrain/eslint-config-base": "workspace:^",
     "eslint": "9.39.3",
-    "eslint-plugin-compat": "6.2.1",
+    "eslint-plugin-compat": "7.0.1",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.5",
