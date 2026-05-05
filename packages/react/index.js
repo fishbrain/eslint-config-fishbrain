@@ -29,7 +29,7 @@ const reactConfig = [
   jsxA11yPlugin.flatConfigs.recommended,
   compatPlugin.configs['flat/recommended'],
   {
-    files: ['**/**/*.{js,ts,jsx,tsx}'],
+    files: ['**/**/*.{js,ts,mts,cts,jsx,tsx}'],
     plugins: {
       'react-hooks': pluginReactHooks,
     },
