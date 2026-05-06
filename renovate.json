@@ -1,6 +1,18 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "customManagers": [],
+    "customManagers": [
+        {
+            "customType": "regex",
+            "datasourceTemplate": "docker",
+            "managerFilePatterns": [
+                ".datadog-agent-version"
+            ],
+            "matchStrings": [
+                "(?<currentValue>[^\\s]+)"
+            ],
+            "packageNameTemplate": "datadog/agent"
+        }
+    ],
     "description": "This file is managed by Terraform. Manual changes will be overwritten. To update this file, look for the `renovate_config` module being used in the `repositories` directory in our Terraform repo.",
     "extends": [
         "config:recommended",
@@ -22,6 +34,12 @@
     "internalChecksFilter": "strict",
     "minimumReleaseAge": "7 days",
     "packageRules": [
+        {
+            "matchPackageNames": [
+                "datadog/agent"
+            ],
+            "pinDigests": false
+        },
         {
             "automerge": true,
             "labels": [],
@@ -54,6 +72,19 @@
                 "packages:test"
             ],
             "labels": [],
+            "matchUpdateTypes": [
+                "minor",
+                "patch",
+                "pin",
+                "digest"
+            ]
+        },
+        {
+            "automerge": true,
+            "labels": [],
+            "matchPackageNames": [
+                "actions/setup-node"
+            ],
             "matchUpdateTypes": [
                 "minor",
                 "patch",
