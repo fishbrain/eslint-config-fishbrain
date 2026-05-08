@@ -1,6 +1,6 @@
 {
   "name": "@fishbrain/eslint-config-react",
-  "packageManager": "yarn@4.13.0",
+  "packageManager": "yarn@4.14.1",
   "version": "6.3.6",
   "type": "module",
   "exports": "./index.js",
@@ -21,7 +21,7 @@
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-testing-library": "7.16.2",
-    "globals": "17.4.0",
+    "globals": "17.5.0",
     "typescript-eslint": "8.59.1"
   },
   "peerDependencies": {

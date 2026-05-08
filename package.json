@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/fishbrain/eslint-config-fishbrain#readme",
   "scripts": {
-    "publish": "yarn workspaces foreach -A --include \"packages/**\" npm publish --access public",
+    "publish": "yarn workspaces foreach -A --no-private npm publish --access public --tolerate-republish",
     "test": "yarn workspaces foreach --all run test"
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.14.1"
 }
