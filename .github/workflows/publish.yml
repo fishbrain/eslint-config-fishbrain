@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   publish:
     runs-on: warp-ubuntu-latest-x64-2x
@@ -13,11 +17,17 @@ jobs:
 
       - name: Enable Corepack
         run: corepack enable
+
       - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
           node-version-file: '.nvmrc'
-          cache: 'yarn'
-      - run: |
-          yarn config set 'npmRegistries["https://registry.npmjs.org"].npmAuthToken' "${{ secrets.NPM_TOKEN }}"
-          yarn config set 'npmRegistries["https://registry.npmjs.org"].npmAlwaysAuth' true
-      - run: yarn run publish
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Pack and publish each workspace
+        run: |
+          set -euo pipefail
+          yarn workspaces foreach -A --no-private exec sh -c '
+            yarn pack
+            npm publish package.tgz --access public --provenance
+            rm -f package.tgz
+          '
