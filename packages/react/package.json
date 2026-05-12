@@ -22,7 +22,7 @@
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-testing-library": "7.16.2",
     "globals": "17.5.0",
-    "typescript-eslint": "8.59.1"
+    "typescript-eslint": "8.59.2"
   },
   "peerDependencies": {
     "react": "^19"
