@@ -4,6 +4,11 @@
   "version": "6.3.6",
   "type": "module",
   "exports": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishbrain/eslint-config-fishbrain.git",
+    "directory": "packages/base"
+  },
   "scripts": {
     "test": "eslint index.js eslint.config.js"
   },
