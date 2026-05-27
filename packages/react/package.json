@@ -1,6 +1,6 @@
 {
   "name": "@fishbrain/eslint-config-react",
-  "packageManager": "yarn@4.14.1",
+  "packageManager": "yarn@4.15.0",
   "version": "6.3.6",
   "type": "module",
   "exports": "./index.js",
