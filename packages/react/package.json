@@ -13,7 +13,7 @@
     "test": "eslint index.js eslint.config.js"
   },
   "devDependencies": {
-    "react": "19.2.6",
+    "react": "19.2.7",
     "typescript": "6.0.3"
   },
   "dependencies": {
