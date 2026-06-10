@@ -4,6 +4,7 @@
     "module": "NodeNext",
     "noEmit": true,
     "strictNullChecks": true,
+    "types": ["node"]
   },
-  "includes": ["."]
+  "include": ["."]
 }

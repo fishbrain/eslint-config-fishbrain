@@ -37,7 +37,13 @@ const reactConfig = [
   },
 ];
 
-const testingConfig = [testingLibraryPlugin.configs['flat/react']];
+// Scope the testing-library plugin to test files only
+const testingConfig = [
+  {
+    files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+    ...testingLibraryPlugin.configs['flat/react'],
+  },
+];
 
 const customRules = {
   rules: {
