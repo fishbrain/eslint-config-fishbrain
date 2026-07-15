@@ -1,6 +1,6 @@
 {
   "name": "@fishbrain/eslint-config-base",
-  "packageManager": "yarn@4.17.0",
+  "packageManager": "yarn@4.17.1",
   "version": "6.3.7",
   "type": "module",
   "exports": "./index.js",
