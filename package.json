@@ -2,7 +2,7 @@
   "name": "@fishbrain/eslint-config-monorepo",
   "private": true,
   "description": "ESLint configs for Fishbrain projects",
-  "version": "6.3.7",
+  "version": "7.0.0",
   "workspaces": [
     "packages/*"
   ],
@@ -23,5 +23,11 @@
     "singleQuote": true,
     "trailingComma": "all"
   },
-  "packageManager": "yarn@4.16.0"
+  "resolutions": {
+    "minimatch": "10.2.6"
+  },
+  "resolutionComments": {
+    "minimatch": "This is needed due to eslint-plugin-jsx-a11y lagging in updating. Minimatch contains a vulnerability in the brace-expansion lib. This override should be very temporary as minimatch is used widely and leaving it pinned will eventually break something else."
+  },
+  "packageManager": "yarn@4.18.0"
 }
