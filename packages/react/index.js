@@ -11,8 +11,9 @@ import { defineConfig } from 'eslint/config';
 
 import {
   config as baseConfig,
-  configWithoutJest as baseConfigWithoutJest,
+  configWithoutVitest as baseConfigWithoutVitest,
   looseTypes as baseLooseTypes,
+  TEST_FILES,
 } from '@fishbrain/eslint-config-base';
 
 // eslint-plugin-react-hooks is the React team's plugin and stays the authority
@@ -56,7 +57,7 @@ const reactConfig = [
 // Scope the testing-library plugin to test files only
 const testingConfig = [
   {
-    files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+    files: TEST_FILES,
     ...testingLibraryPlugin.configs['flat/react'],
   },
 ];
@@ -85,8 +86,8 @@ export const config = defineConfig(
   customRules,
 );
 
-export const configWithoutJest = defineConfig(
-  ...baseConfigWithoutJest,
+export const configWithoutVitest = defineConfig(
+  ...baseConfigWithoutVitest,
   ...reactConfig,
   customRules,
 );
