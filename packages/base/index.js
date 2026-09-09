@@ -1,4 +1,4 @@
-import jestPlugin from 'eslint-plugin-jest';
+import vitestPlugin from '@vitest/eslint-plugin';
 import eslint from '@eslint/js';
 // eslint-disable-next-line import/no-unresolved
 import tseslint from 'typescript-eslint';
@@ -40,6 +40,21 @@ const baseConfig = [
   importPlugin.flatConfigs.typescript,
 ];
 
+export const TEST_FILES = [
+  '**/__tests__/**/*.[jt]s?(x)',
+  '**/?(*.)+(spec|test).[jt]s?(x)',
+];
+
+const testConfig = {
+  files: TEST_FILES,
+  ...vitestPlugin.configs.recommended,
+  ...vitestPlugin.configs.env,
+  rules: {
+    ...vitestPlugin.configs.recommended.rules,
+    '@typescript-eslint/unbound-method': 'off', // vitest/unbound-method replaces it in test files.
+  },
+};
+
 const customRules = {
   rules: {
     '@typescript-eslint/no-empty-function': 'off', // Noop functions are a common pattern we use during testing, so we don't want to enable it.
@@ -71,13 +86,9 @@ const customRules = {
   },
 };
 
-export const configWithoutJest = defineConfig(...baseConfig, customRules);
+export const configWithoutVitest = defineConfig(...baseConfig, customRules);
 
-export const config = defineConfig(
-  ...baseConfig,
-  jestPlugin.configs['flat/recommended'],
-  customRules,
-);
+export const config = defineConfig(...baseConfig, testConfig, customRules);
 
 /* Use this if your project is not well typed yet (e.g. lots of `any` types). Ideally you should not use this, but in some cases it may be necessary. */
 export const looseTypes = [
