@@ -1,7 +1,7 @@
 {
   "name": "@fishbrain/eslint-config-base",
   "packageManager": "yarn@4.18.0",
-  "version": "7.0.0",
+  "version": "7.1.0",
   "type": "module",
   "exports": "./index.js",
   "repository": {
@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@eslint/js": "10.0.1",
+    "@vitest/eslint-plugin": "1.6.27",
     "eslint": "10.10.0",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jest": "29.16.6",
     "eslint-plugin-prettier": "5.5.6",
     "prettier": "3.9.6",
     "typescript-eslint": "8.69.0"
@@ -25,6 +25,8 @@
     "typescript": ">=5.0.0"
   },
   "devDependencies": {
-    "jest": "30.5.1"
+    "@types/node": "24.13.3",
+    "vite": "8.2.2",
+    "vitest": "5.0.0"
   }
 }

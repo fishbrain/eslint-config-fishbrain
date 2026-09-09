@@ -17,10 +17,10 @@ Create a file in the root of your project named `eslint.config.js`, or `eslint.c
 Populate it with the following content:
 
 ```js
-import { config, looseTypes, configWithoutJest } from '@fishbrain/eslint-config-base';
+import { config, looseTypes, configWithoutVitest } from '@fishbrain/eslint-config-base';
 
 export default [
-  ...config, // or configWithoutJest if the project doesn't use Jest.
+  ...config, // or configWithoutVitest if the project doesn't use Vitest.
   ...looseTypes, // Use this if the project is poorly typed.
 ];
 ```
