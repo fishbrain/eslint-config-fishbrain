@@ -1,7 +1,7 @@
 {
   "name": "@fishbrain/eslint-config-react",
   "packageManager": "yarn@4.18.0",
-  "version": "7.1.0",
+  "version": "7.2.0",
   "type": "module",
   "exports": "./index.js",
   "repository": {
@@ -13,7 +13,7 @@
     "test": "eslint index.js eslint.config.js"
   },
   "devDependencies": {
-    "react": "19.2.8",
+    "react": "19.3.0",
     "typescript": "6.0.3"
   },
   "dependencies": {
@@ -27,7 +27,7 @@
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-testing-library": "7.16.2",
     "globals": "17.12.0",
-    "typescript-eslint": "8.69.0"
+    "typescript-eslint": "8.70.0"
   },
   "peerDependencies": {
     "react": "^19"
