@@ -17,7 +17,7 @@
     "typescript": "6.0.3"
   },
   "dependencies": {
-    "@eslint-react/eslint-plugin": "5.19.0",
+    "@eslint-react/eslint-plugin": "5.19.1",
     "@eslint/js": "10.0.1",
     "@fishbrain/eslint-config-base": "workspace:^",
     "eslint": "10.10.0",
