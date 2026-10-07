@@ -1,10 +1,8 @@
 import vitestPlugin from '@vitest/eslint-plugin';
 import eslint from '@eslint/js';
-// eslint-disable-next-line import/no-unresolved
-import tseslint from 'typescript-eslint';
+import { configs as tseslintConfigs } from 'typescript-eslint';
 import prettierPlugin from 'eslint-plugin-prettier';
 import importPlugin from 'eslint-plugin-import';
-// eslint-disable-next-line import/no-unresolved
 import { defineConfig } from 'eslint/config';
 
 const HTTP_CODES = [
@@ -25,8 +23,8 @@ const ALLOWED_NUMBERS = Array.from(
 
 const baseConfig = [
   eslint.configs.recommended,
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  ...tseslintConfigs.strictTypeChecked,
+  ...tseslintConfigs.stylisticTypeChecked,
   {
     languageOptions: {
       parserOptions: {
@@ -37,7 +35,17 @@ const baseConfig = [
   },
   { plugins: { prettier: prettierPlugin } },
   importPlugin.flatConfigs.recommended,
-  importPlugin.flatConfigs.typescript,
+  {
+    ...importPlugin.flatConfigs.typescript,
+    settings: {
+      ...importPlugin.flatConfigs.typescript.settings,
+      'import/resolver': {
+        typescript: true,
+        ...(importPlugin.flatConfigs.typescript.settings?.['import/resolver'] ??
+          {}),
+      },
+    },
+  },
 ];
 
 export const TEST_FILES = [

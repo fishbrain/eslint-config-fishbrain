@@ -6,7 +6,6 @@ import compatPlugin from 'eslint-plugin-compat';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 import testingLibraryPlugin from 'eslint-plugin-testing-library';
-// eslint-disable-next-line import/no-unresolved
 import { defineConfig } from 'eslint/config';
 
 import {
